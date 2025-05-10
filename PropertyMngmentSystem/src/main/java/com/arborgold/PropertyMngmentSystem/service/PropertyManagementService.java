@@ -64,10 +64,10 @@ public class PropertyManagementService {
     public List<PropertyManager> getAllPropertyManagers() {
         return (List<PropertyManager>) queryHandlerRegistry.execute(GetAllPropertyManagersQuery.class, new GetAllPropertyManagersQuery());
     }
-    public Property assignPropertyManager(Long propertyId, Long managerId) {
-        AssignPropertyManagerCommand command = new AssignPropertyManagerCommand(propertyId, managerId);
-        return (Property) commandHandlerRegistry.execute(AssignPropertyManagerCommand.class, command);
-    }
+//    public Property assignPropertyManager(Long propertyId, Long managerId) {
+//        AssignPropertyManagerCommand command = new AssignPropertyManagerCommand(propertyId, managerId);
+//        return (Property) commandHandlerRegistry.execute(AssignPropertyManagerCommand.class, command);
+//    }
 
     public Optional<PropertyManager> getPropertyManagerById(Long propertyManagerId) {
         return (Optional<PropertyManager>) queryHandlerRegistry.execute(GetPropertyManagerByIdQuery.class, new GetPropertyManagerByIdQuery(propertyManagerId));

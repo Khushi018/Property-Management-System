@@ -12,16 +12,16 @@ public class CommandHandlerRegistry {
 
     private final Map<Class<?>, Object> handlerMap = new HashMap<>();
 
-    public CommandHandlerRegistry(PropertyCommandHandler propertyCommandHandler, PropertyManagerCommandHandler propertyManagerCommandHandler) {
-        // Registering property-related handlers
-        handlerMap.put(AddPropertyCommand.class, propertyCommandHandler);
-        handlerMap.put(UpdatePropertyCommand.class, propertyCommandHandler);
-        handlerMap.put(AssignPropertyManagerCommand.class, propertyCommandHandler);
-
-        // Registering property manager handlers
-        handlerMap.put(AddPropertyManagerCommand.class, propertyManagerCommandHandler);
-        handlerMap.put(UpdatePropertyManagerCommand.class, propertyManagerCommandHandler);
-    }
+//    public CommandHandlerRegistry(PropertyCommandHandler propertyCommandHandler, PropertyManagerCommandHandler propertyManagerCommandHandler) {
+//        // Registering property-related handlers
+//        handlerMap.put(AddPropertyCommand.class, propertyCommandHandler);
+//        handlerMap.put(UpdatePropertyCommand.class, propertyCommandHandler);
+//        handlerMap.put(AssignPropertyManagerCommand.class, propertyCommandHandler);
+//
+//        // Registering property manager handlers
+//        handlerMap.put(AddPropertyManagerCommand.class, propertyManagerCommandHandler);
+//        handlerMap.put(UpdatePropertyManagerCommand.class, propertyManagerCommandHandler);
+//    }
 
     public <T> Object execute(Class<T> commandClass, T command) {
         Object handler = handlerMap.get(commandClass);

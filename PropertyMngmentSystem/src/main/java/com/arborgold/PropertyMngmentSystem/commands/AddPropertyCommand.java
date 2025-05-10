@@ -1,5 +1,6 @@
 package com.arborgold.PropertyMngmentSystem.commands;
 
+import com.arborgold.PropertyMngmentSystem.service.PropertyManagementService;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,4 +15,5 @@ public class AddPropertyCommand {
     private double currentValue;
     private boolean occupied;
     private String propertyManagerName;
+
 }
